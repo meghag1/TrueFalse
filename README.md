@@ -1,1 +1,1 @@
-# TrueFalse Pidget/DoodlePad Project
+# TrueFalse Phidget/DoodlePad Project
