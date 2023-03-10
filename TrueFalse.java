@@ -45,22 +45,25 @@ public static void main(String[] args) throws Exception  {
  // detect which button is being pressed
             if( redButton.getState()){
                 redLED.setState(true);
-                
+                System.out.print("count1++");
+                Thread.sleep(150);
                 count1++;
-            } else {
                 redLED.setState(false);
-            }
-
-            if(greenButton.getState()){
-                greenLED.setState(true);
-                
-                count2++;
-            } else {
                 greenLED.setState(false);
-            }
+            } 
+
+
+            else if(greenButton.getState()){
+                greenLED.setState(true);
+                System.out.print("count2++");
+                Thread.sleep(150);
+                count2++;
+                redLED.setState(false);
+                greenLED.setState(false);
+            } 
 
             Thread.sleep(150);
-
+ /*
 	if (count1==1) { // if its the wrong answer then display red
 		 //Address 
         redLED.setHubPort(1);
@@ -75,8 +78,8 @@ public static void main(String[] args) throws Exception  {
             Thread.sleep(1000);
             redLED.setState(false);
             Thread.sleep(1000);
-          }
-	  }
+          }//close for
+	  }//close if
 	  
 	  else if (count2==1) { // if right answer display green
 		  
@@ -93,8 +96,11 @@ public static void main(String[] args) throws Exception  {
             Thread.sleep(1000);
             greenLED.setState(false);
             Thread.sleep(1000);
-        }
-      }
+        }//close for
+      }//close else if
+       
+      greenLED.setState(false);
+      redLED.setState(false); */
   }
 	
 }
